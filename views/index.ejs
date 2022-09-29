@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name=”viewport” content=”width=device-width,initial-scale=1″>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
@@ -17,7 +18,7 @@
       <% for(var i in content){ %>
         <% var obj = content[i]; %>
         <div>ID:<%= obj.id %> </div>
-        <div>NAME: <%= obj.name %></div>
+        <div>QUANTITY: <%= obj.quantity %></div>
         <div>TEXT: <%= obj.text %> </div> 
         <form action="/delete"method="post">
           <input type="hidden" name="id" value="<%= obj.id %> ">

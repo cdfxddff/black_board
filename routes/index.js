@@ -3,11 +3,7 @@ var router = express.Router();
 var pg = require('pg');
 
 var pg_setting={
-  host:'ec2-34-231-42-166.compute-1.amazonaws.com',
-  user:'ommmxguzstjfug',
-  password:'17f2ed7dd0f468f043bf2fc15db01533610663bdacb069337e6e0dfd5720d57c',
-  database:'da7rah3vmlb93s',
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
   }
